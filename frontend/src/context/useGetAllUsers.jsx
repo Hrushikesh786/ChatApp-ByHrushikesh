@@ -20,6 +20,7 @@ const useGetAllUsers = () => {
                 setLoading(false)
             } catch (error) {
                 console.log("Error in getUSers:",error);
+                setLoading(false)
             }
         }
         getUsers()

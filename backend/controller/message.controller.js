@@ -45,10 +45,10 @@ export const getMessage=async(req,res)=>{
             members:{$all:[senderId,chatUser]},
         }).populate("messages")
         if(!conversation){
-            return res.status(401).json([])
+            return res.status(201).json([])
         }
         const messages=conversation.messages
-        res.status(201).json(messages)
+       return res.status(201).json(messages)
         
     } catch (error) {
         console.log("error in get message:",error);

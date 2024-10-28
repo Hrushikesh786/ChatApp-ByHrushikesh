@@ -5,15 +5,13 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import { useAuth } from './context/Authprovider'
 import { Navigate, Route, Routes } from "react-router-dom"
+import Loading from './components/Loading'
 
 
 const App = () => {
   const [authUser, setAuthUser]=useAuth()
   console.log(authUser)
   return (
-  
-    // <Signup/>
-    // <Login/>
     <Routes>
       <Route path='/' element={
         authUser?  <div className='flex h-screen overflow-hidden'>
@@ -25,6 +23,7 @@ const App = () => {
       <Route path='signup' element=  {authUser? <Navigate to={"/"}/>:<Signup/>}/>
       <Route path='login' element=  {authUser? <Navigate to={"/"}/>:<Login/>}/>
     </Routes>
+    // <Loading/>
   )
 }
 
