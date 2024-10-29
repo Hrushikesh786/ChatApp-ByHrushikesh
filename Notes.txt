@@ -1,1 +1,5 @@
 now the work is simple we have to just make frontend messages component work
+
+message  component 
+when hrushi is login then send the message to sharjeena id
+and when sharjeena is login send the message to hrushis id
