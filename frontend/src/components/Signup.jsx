@@ -33,14 +33,14 @@ const Signup = () => {
     .then((response)=>{
       // console.log(response.data);
       if(response.data){
-        alert("signup Successful")
+        toast.success("signup Successful")
       }
       localStorage.setItem("ChatApp",JSON.stringify(response.data))
       setAuthUser(response.data)
     })
     .catch((error)=>{
       if(error.response){
-        alert("Error:"+error.response.data.error)
+        toast.error("Error:"+error.response.data.error)
       }
     })
     
