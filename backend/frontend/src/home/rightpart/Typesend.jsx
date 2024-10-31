@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoSendSharp } from "react-icons/io5";
-import useSendMessage from "../../context/useSendMessage";
+import useSendMessage from "../../context/useSendMessage.jsx";
 const Typesend = () => {
   const [message, setMessage] = useState("");
   const { loading, sendMessages } = useSendMessage();
